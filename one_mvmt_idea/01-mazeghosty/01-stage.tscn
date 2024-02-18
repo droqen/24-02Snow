@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://d2715q25oxtqv"]
+
+[ext_resource type="Script" path="res://again/pin(input)/PinSetup.gd" id="1_sf6nw"]
+[ext_resource type="PackedScene" uid="uid://doygwmpghu05w" path="res://again/board/BoardDisplayPrefab.tscn" id="1_to24k"]
+[ext_resource type="PackedScene" uid="uid://dcbqmy46tdqup" path="res://01-mazeghosty/01-mazeghosty-board.tscn" id="2_0pau8"]
+[ext_resource type="PackedScene" uid="uid://pn5m6cbh3o41" path="res://again/board/UnsplashPrefab.tscn" id="3_i566f"]
+
+[node name="01-stage" type="Node2D"]
+
+[node name="PinSetup" type="Node" parent="."]
+script = ExtResource("1_sf6nw")
+
+[node name="BoardDisplayPrefab" parent="." instance=ExtResource("1_to24k")]
+board_scene = ExtResource("2_0pau8")
+
+[node name="UnsplashPrefab" parent="." instance=ExtResource("3_i566f")]

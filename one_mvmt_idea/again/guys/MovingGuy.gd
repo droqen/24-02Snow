@@ -18,6 +18,9 @@ var bufs : Bufs = Bufs.new()
 
 @onready var spr : SheetSprite = $SheetSprite
 
+func _ready():
+	bufs.defon(FLORBUF, 4)
+
 func _physics_process(_delta):
 	# please override this completely
 	bufs.process_bufs()
@@ -38,6 +41,6 @@ func on_bonk_h(hit:KinematicCollision2D):
 	velocity.x = 0
 func on_bonk_v(hit:KinematicCollision2D):
 	if velocity.y >= 0:
-		bufs.setmin(FLORBUF, 4)
+		bufs.on(FLORBUF)
 	velocity.y = 0
  

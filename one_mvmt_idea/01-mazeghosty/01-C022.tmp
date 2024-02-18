@@ -1,0 +1,42 @@
+[gd_scene load_steps=9 format=3 uid="uid://dcbqmy46tdqup"]
+
+[ext_resource type="Script" path="res://again/board/BoardNode.gd" id="1_vd88g"]
+[ext_resource type="TileSet" uid="uid://c3kswsn5phheu" path="res://pixel/killer_tiles.tres" id="2_rog1j"]
+[ext_resource type="Script" path="res://again/sheet/SheetTileMap.gd" id="3_5v4g5"]
+[ext_resource type="Resource" uid="uid://bq0sjwxgdoul0" path="res://pixel/killer_sheet.tres" id="4_q6lok"]
+[ext_resource type="Script" path="res://01-mazeghosty/GhostyJumper.gd" id="5_6tlsh"]
+[ext_resource type="Texture2D" uid="uid://de6sh1eya5pas" path="res://pixel/killer.png" id="6_4pt43"]
+[ext_resource type="Script" path="res://again/sheet/SheetSprite.gd" id="7_238ca"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_idmuy"]
+size = Vector2(8, 9)
+
+[node name="01-mazeghosty-board" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_vd88g")
+size = Vector2i(100, 100)
+
+[node name="SheetTileMap" type="TileMap" parent="."]
+tile_set = ExtResource("2_rog1j")
+format = 2
+layer_0/tile_data = PackedInt32Array(0, 65536, 0, 65536, 65536, 0, 131072, 65536, 0, 196608, 65536, 0, 262144, 65536, 0, 327680, 65536, 0, 393216, 65536, 0, 458752, 65536, 0, 524288, 65536, 0, 589824, 65536, 0, 1, 65536, 0, 65537, 65536, 0, 131073, 0, 0, 196609, 65536, 0, 262145, 65536, 0, 327681, 65536, 0, 393217, 0, 0, 458753, 0, 0, 524289, 0, 0, 589825, 65536, 0, 2, 65536, 0, 65538, 0, 0, 131074, 0, 0, 196610, 0, 0, 262146, 0, 0, 327682, 0, 0, 393218, 0, 0, 458754, 65536, 0, 524290, 0, 0, 589826, 65536, 0, 3, 65536, 0, 65539, 65536, 0, 131075, 0, 0, 196611, 65536, 0, 262147, 0, 0, 327683, 0, 0, 393219, 0, 0, 458755, 65536, 0, 524291, 0, 0, 589827, 65536, 0, 4, 65536, 0, 65540, 0, 0, 131076, 0, 0, 196612, 0, 0, 262148, 0, 0, 327684, 0, 0, 393220, 0, 0, 458756, 0, 0, 524292, 0, 0, 589828, 65536, 0, 5, 65536, 0, 65541, 65536, 0, 131077, 65536, 0, 196613, 0, 0, 262149, 0, 0, 327685, 0, 0, 393221, 0, 0, 458757, 0, 0, 524293, 0, 0, 589829, 65536, 0, 6, 65536, 0, 65542, 0, 0, 131078, 0, 0, 196614, 0, 0, 262150, 0, 0, 327686, 0, 0, 393222, 65536, 0, 458758, 0, 0, 524294, 0, 0, 589830, 65536, 0, 7, 65536, 0, 65543, 65536, 0, 131079, 0, 0, 196615, 65536, 0, 262151, 0, 0, 327687, 0, 0, 393223, 0, 0, 458759, 0, 0, 524295, 65536, 0, 589831, 65536, 0, 8, 65536, 0, 65544, 65536, 0, 131080, 0, 0, 196616, 0, 0, 262152, 0, 0, 327688, 0, 0, 393224, 65536, 0, 458760, 65536, 0, 524296, 65536, 0, 589832, 65536, 0, 9, 65536, 0, 65545, 65536, 0, 131081, 65536, 0, 196617, 65536, 0, 262153, 65536, 0, 327689, 65536, 0, 393225, 65536, 0, 458761, 65536, 0, 524297, 65536, 0, 589833, 65536, 0)
+script = ExtResource("3_5v4g5")
+sheet = ExtResource("4_q6lok")
+
+[node name="MovingGuy" type="CharacterBody2D" parent="."]
+position = Vector2(18, 85)
+script = ExtResource("5_6tlsh")
+
+[node name="SheetSprite" type="Sprite2D" parent="MovingGuy"]
+texture = ExtResource("6_4pt43")
+hframes = 10
+vframes = 10
+frame = 2
+script = ExtResource("7_238ca")
+sprite_sheet = ExtResource("4_q6lok")
+_frames = Array[int]([2, 3])
+_frame_period = 12
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MovingGuy"]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_idmuy")

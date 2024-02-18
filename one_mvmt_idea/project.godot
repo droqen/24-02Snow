@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="One Mvmt Idea"
-run/main_scene="res://00-car/00-stage.tscn"
+run/main_scene="res://01-mazeghosty/01-stage.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
 
@@ -25,3 +25,4 @@ config/icon="res://icon.svg"
 
 renderer/rendering_method="gl_compatibility"
 renderer/rendering_method.mobile="gl_compatibility"
+environment/defaults/default_clear_color=Color(0.945098, 0.882353, 0.882353, 1)
