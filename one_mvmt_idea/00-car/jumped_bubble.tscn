@@ -1,0 +1,33 @@
+[gd_scene load_steps=7 format=3 uid="uid://c06s275k6a8ga"]
+
+[ext_resource type="Texture2D" uid="uid://dg121jmjlk3ov" path="res://pixel/mvmt.png" id="1_dfqwf"]
+[ext_resource type="Script" path="res://00-car/jumped_bubble.gd" id="1_ghxvn"]
+[ext_resource type="Script" path="res://again/sheet/SheetSprite.gd" id="2_tygbu"]
+[ext_resource type="Resource" uid="uid://bjp4vsltnw4xg" path="res://pixel/mvmt_sheet.tres" id="3_pj1cc"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_y0c58"]
+friction = 0.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xqeh1"]
+radius = 2.0
+
+[node name="JumpedBubble" type="RigidBody2D"]
+position = Vector2(46, 135)
+collision_layer = 2
+collision_mask = 3
+physics_material_override = SubResource("PhysicsMaterial_y0c58")
+gravity_scale = 0.1
+linear_damp = 1.0
+script = ExtResource("1_ghxvn")
+
+[node name="SheetSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_dfqwf")
+hframes = 10
+vframes = 10
+frame = 23
+script = ExtResource("2_tygbu")
+sprite_sheet = ExtResource("3_pj1cc")
+_frames = Array[int]([23])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_xqeh1")

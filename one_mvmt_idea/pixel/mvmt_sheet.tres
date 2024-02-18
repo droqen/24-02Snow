@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Sheet" load_steps=3 format=3 uid="uid://bjp4vsltnw4xg"]
+
+[ext_resource type="Script" path="res://again/sheet/Sheet.gd" id="1_3huw3"]
+[ext_resource type="Texture2D" uid="uid://dg121jmjlk3ov" path="res://pixel/mvmt.png" id="2_nc4pp"]
+
+[resource]
+script = ExtResource("1_3huw3")
+texture = ExtResource("2_nc4pp")
+hframes = 10
+vframes = 10

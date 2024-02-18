@@ -1,0 +1,16 @@
+[gd_scene load_steps=5 format=3 uid="uid://bapuxglgcar7n"]
+
+[ext_resource type="Script" path="res://again/pin(input)/PinSetup.gd" id="1_pqiu8"]
+[ext_resource type="PackedScene" uid="uid://doygwmpghu05w" path="res://again/board/BoardDisplayPrefab.tscn" id="1_r3lx2"]
+[ext_resource type="PackedScene" uid="uid://bkcwnvdgulcgh" path="res://00-car/00-car-board.tscn" id="2_gw30b"]
+[ext_resource type="PackedScene" uid="uid://pn5m6cbh3o41" path="res://again/board/UnsplashPrefab.tscn" id="2_ix36y"]
+
+[node name="00-stage" type="Node2D"]
+
+[node name="PinSetup" type="Node" parent="."]
+script = ExtResource("1_pqiu8")
+
+[node name="BoardDisplayPrefab" parent="." instance=ExtResource("1_r3lx2")]
+board_scene = ExtResource("2_gw30b")
+
+[node name="UnsplashPrefab" parent="." instance=ExtResource("2_ix36y")]
