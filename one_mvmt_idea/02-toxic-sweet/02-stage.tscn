@@ -1,0 +1,13 @@
+[gd_scene load_steps=4 format=3 uid="uid://dxabl447v71lv"]
+
+[ext_resource type="PackedScene" uid="uid://doygwmpghu05w" path="res://again/board/BoardDisplayPrefab.tscn" id="1_p36nl"]
+[ext_resource type="PackedScene" uid="uid://b6lai6564734c" path="res://02-toxic-sweet/02-toxic-board.tscn" id="2_37tyb"]
+[ext_resource type="PackedScene" uid="uid://pn5m6cbh3o41" path="res://again/board/UnsplashPrefab.tscn" id="3_44ipr"]
+
+[node name="02-stage" type="Node2D"]
+
+[node name="BoardDisplayPrefab" parent="." instance=ExtResource("1_p36nl")]
+position = Vector2(0, -1)
+board_scene = ExtResource("2_37tyb")
+
+[node name="UnsplashPrefab" parent="." instance=ExtResource("3_44ipr")]

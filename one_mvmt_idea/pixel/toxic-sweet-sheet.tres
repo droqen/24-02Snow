@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Sheet" load_steps=3 format=3 uid="uid://cque2cdajx7at"]
+
+[ext_resource type="Script" path="res://again/sheet/Sheet.gd" id="1_oyylt"]
+[ext_resource type="Texture2D" uid="uid://d0k1ehy6m8ead" path="res://pixel/toxic-sweet.png" id="2_m06ad"]
+
+[resource]
+script = ExtResource("1_oyylt")
+texture = ExtResource("2_m06ad")
+hframes = 10
+vframes = 10
