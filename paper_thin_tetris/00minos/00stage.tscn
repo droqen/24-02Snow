@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://f56fv7fi0cdo"]
+
+[ext_resource type="PackedScene" uid="uid://doygwmpghu05w" path="res://again/board/BoardDisplayPrefab.tscn" id="1_mmhrs"]
+[ext_resource type="PackedScene" uid="uid://xwkowrp3vh52" path="res://00minos/00tetris-board.tscn" id="2_0ho28"]
+[ext_resource type="PackedScene" uid="uid://pn5m6cbh3o41" path="res://again/board/UnsplashPrefab.tscn" id="3_ertqh"]
+
+[node name="00Stage" type="Node2D"]
+
+[node name="BoardDisplayPrefab" parent="." instance=ExtResource("1_mmhrs")]
+board_scene = ExtResource("2_0ho28")
+
+[node name="UnsplashPrefab" parent="." instance=ExtResource("3_ertqh")]

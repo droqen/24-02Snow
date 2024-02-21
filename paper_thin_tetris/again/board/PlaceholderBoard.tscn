@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c2w8kt6j422yr"]
+
+[ext_resource type="Script" path="res://again/board/BoardNode.gd" id="1_01byy"]
+[ext_resource type="Texture2D" uid="uid://dw2nicu2va5mq" path="res://icon.svg" id="2_xoqcw"]
+
+[node name="PlaceholderBoard" type="Node2D"]
+texture_filter = 1
+script = ExtResource("1_01byy")
+size = Vector2i(128, 128)
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(64, 64)
+texture = ExtResource("2_xoqcw")
