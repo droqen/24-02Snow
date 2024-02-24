@@ -10,3 +10,4 @@
 board_scene = ExtResource("2_0ho28")
 
 [node name="UnsplashPrefab" parent="." instance=ExtResource("3_ertqh")]
+visible = false
